@@ -1,0 +1,20 @@
+# 依赖
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 日志与临时产物
+*.log
+tmp/
+dist/
+
+# WAV 试听样本（体积大，仅本地用）
+preview/*.wav

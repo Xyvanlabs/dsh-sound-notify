@@ -1,0 +1,54 @@
+{
+  "name": "dsh-sound-notify",
+  "version": "1.0.0",
+  "private": true,
+  "description": "会话中断或正常结束时播放提示音：两种场景可分别配置音效、可单独关闭或静音，另有全局开关与音量。",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "sound",
+    "notification"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xyvanlabs/dsh-sound-notify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Xyvanlabs/dsh-sound-notify/issues"
+  },
+  "homepage": "https://github.com/Xyvanlabs/dsh-sound-notify#readme",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json",
+    "./icon": "./icon.svg"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.1.1-rc.2 <0.3.0"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "license": "MIT"
+}
+

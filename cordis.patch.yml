@@ -1,0 +1,16 @@
+# dsh-sound-notify bundle patch: adds the sound-notify row to the profile roster.
+# The row name resolves from the profile's own node_modules, where
+# `dsh plugin --profile desktop add link:<this package>` installed it.
+#
+# 想改全局音量、静音或换音效，在下面 config: 里加字段即可（见 README）。
+# 三个场景：completed（正常结束）/ interrupted（中断、报错、超限）/ ask（模型提问、等你输入）。
+- insert:
+    - id: sound-notify
+      name: dsh-sound-notify
+      config:
+        enabled: true
+        muted: false
+        volume: 0.7
+        interrupted: { enabled: true, sound: interrupted, volume: 1 }
+        completed: { enabled: true, sound: completed, volume: 1 }
+        ask: { enabled: true, sound: interrupted, volume: 1 }
